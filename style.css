@@ -64,3 +64,53 @@ a:any-link {
 .cimke li a:hover:not(.aktualis) {
     background-color: #00737b;
 }
+
+.div1{
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    transition: 0.5s;
+    float: left;
+}
+
+.div2{
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    transition: 0.5s;
+    float: left;
+  
+}
+
+.div3 {
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    transition: 0.5s;
+    float: left;
+  
+}
+
+.div4{
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    transition: 0.5s;
+    float: left;
+}
+
+.div1:hover{
+    transform: scale(1.1);
+}
+
+.div2:hover{
+    transform: scale(1.1);
+}
+
+.div3:hover{
+    transform: scale(1.1);
+}
+
+.div4:hover{
+    transform: scale(1.1);
+}
