@@ -114,3 +114,7 @@ a:any-link {
 .div4:hover{
     transform: scale(1.1);
 }
+
+footer{
+    text-align: center;
+}
