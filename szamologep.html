@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Számológép</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="title">
+        <h1 class="center">Szabó Levente Balázs</h1>
+    </div>
+        <div class="menu">
+            <a href="index.html"><font color="blue"><b>Főoldal</b></font></a>
+            <a href="lista.html">Lista</a>
+            <a href="keplink.html">Képlink</a>
+            <a href="tablazat.html">Táblázat</a>
+            <a href="urlap.html">Űrlap</a>
+            <a href="div.html">Évszakok</a>
+            <a href="homoktovis/homoktovis.html">Homoktövis</a>
+            <a class="aktualis" href="szamologep.html"><font color="#196F3D">Számológép</font></a>     
+        </div>
+        <div class="main">
+            <form action="javascript:void(0)">
+            <fieldset>
+                <legend>Számológép</legend>
+                    <input type="number" name="szam" id="szam1" placeholder="Szám1">*
+                    <input type="number" name="szam" id="szam2" placeholder="Szám2">=
+                    <input type="number" id="eredmeny" placeholder="Eredmény" readonly> <br> <br>
+                    <label for="muv">művelet:</label> <br>
+                    <input type="button" name="muv" value="+" onclick="ad()">
+                    <input type="button" name="muv" value="-" onclick="kiv()">
+                    <input type="button" name="muv" value="*" onclick="szor()">
+                    <input type="button" name="muv" value="/" onclick="oszt()">
+                    <input type="reset" name="muv" value="DEL">
+            </fieldset>
+        </form>
+        </div>
+
+        <div class="right">
+            <h2>Rólam</h2> 
+            <p>Megtanultam főzni.</p>
+            <p>Ki tudom rakni a 4x4-es Rubik kockát.</p>
+            <p>Szeretek pókerezni.</p>
+         </div>
+        <div>
+            <hr width="90%" >
+            <footer>
+                <p>Szerző: Szabó Levente Balázs<br>
+                <a href="mailto:szabol@kkszki.hu">szabol@kkszki.hu</a></p>
+            </footer>
+        </div>
+        <script> 
+                function ad() { 
+                eredmeny.value = Number(szam1.value) + Number(szam2.value);
+                }         
+                function kiv() {
+                eredmeny.value = Number(szam1.value) - Number(szam2.value);            
+                }         
+                function szor() {
+                eredmeny.value = Number(szam1.value) * Number(szam2.value);
+                }         
+                function oszt() {
+                eredmeny.value = Number(szam1.value) / Number(szam2.value);
+                }     
+        </script>
+</body>
+</html>
