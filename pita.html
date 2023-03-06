@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pitagorasz tétel</title>
+</head>
+<body>
+    <div class="title">
+        <h1 class="center">Szabó Levente Balázs</h1>
+    </div>
+    <div style="overflow:auto">
+        <div class="menu">
+          <a href="index.html"><font color="blue"><b>Főoldal</b></font></a>
+          <a href="lista.html">Lista</a>
+          <a href="keplink.html">Képlink</a>
+          <a href="tablazat.html">Táblázat</a>
+          <a href="urlap.html">Űrlap</a>
+          <a href="div.html">Évszakok</a>
+          <a href="homoktovis/homoktovis.html">Homoktövis</a>
+          <a href="szamologep.html">Számológép</a> 
+          <a class="aktualis" href="pita.html"><font color="#196F3D">Pitagorasz tétel</font></a>
+        </div>
+
+        <div class="main">
+            <img src="img/pitagorasz.png" alt=""> <br>
+           a = <input type="text" name="a" id="a" placeholder="cm" oninput="pita()"> <br>
+           b = <input type="text" name="b" id="b" placeholder="cm" oninput="pita()"> <br>
+           c = <input type="text" name="c" id="c" placeholder="cm" oninput="pita()"> <br> <br>
+            <input type="button" name="töröl" value="Töröl" onclick="torol()">
+        </div>
+
+        <div class="right">
+            <h2>Rólam</h2>
+            <p>Van egy testvérem.</p>
+            <p>Szabadidőmben Rubik kockázok.</p>
+            <p>Hobbim a videójátékok.</p>
+          </div>
+      
+    </div>
+    <div>
+        <hr width="90%">
+            <footer>
+                <p>Szerző: Szabó Levente Balázs<br>
+                <a href="mailto:szabol@kkszki.hu">szabol@kkszki.hu</a></p>
+            </footer>
+
+            <script>
+                function pita() {
+                    if (a.value != 0 && b.value != 0) {
+                        c.value = Math.sqrt((a.value*a.value)+(b.value*b.value));  
+                    }
+                    else if (a.value != 0 && c.value != 0) {
+                        b.value = Math.sqrt((c.value*c.value)-(a.value*a.value));   
+                    }
+                    else if (b.value != 0 && c.value != 0) {
+                        a.value = Math.sqrt((c.value * c.value)-(b.value*b.value));
+                    }
+        }
+        function torol() {
+            a.value = "";
+            b.value = "";
+            c.value = "";
+            document.location.reload();
+        }
+            </script>
+    </div>
+</body>
+</html>
